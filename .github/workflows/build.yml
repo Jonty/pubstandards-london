@@ -25,6 +25,7 @@ jobs:
         run: |
           pip install -r ./requirements.txt
           python ./ps.py &
+          sleep 10
           mkdir output
           wget -P output --mirror --convert-links --adjust-extension --page-requisites --no-parent http://127.0.0.1:5000
           kill %1
