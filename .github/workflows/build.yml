@@ -27,7 +27,7 @@ jobs:
           python ./ps.py &
           sleep 10
           mkdir output
-          wget -P output --mirror --convert-links --adjust-extension --page-requisites --no-parent http://127.0.0.1:5000
+          wget -P output -nH --mirror --convert-links --adjust-extension --page-requisites --no-parent http://127.0.0.1:5000
           kill %1
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
